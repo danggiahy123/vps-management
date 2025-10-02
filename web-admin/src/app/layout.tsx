@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'VPS Management Admin',
-  description: 'Web admin panel for VPS management',
+  description: 'Modern web admin panel for VPS management system',
 }
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen bg-gray-50">
           <Sidebar />
           <main className="flex-1 overflow-auto">
             {children}
