@@ -1,0 +1,326 @@
+[
+  {
+    "id": "alert-001",
+    "vmId": "vm-01",
+    "userId": "user-02",
+    "title": "High CPU Usage",
+    "message": "CPU usage has exceeded 80% for the past 5 minutes on web-01",
+    "type": "warning",
+    "category": "performance",
+    "status": "active",
+    "priority": "high",
+    "data": {
+      "metric": "cpu",
+      "value": 85.2,
+      "threshold": 80
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:05:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:05:00Z"
+      }
+    },
+    "createdAt": "2024-01-20T02:00:00Z"
+  },
+  {
+    "id": "alert-002",
+    "vmId": "vm-02",
+    "userId": "user-02",
+    "title": "Memory Usage Warning",
+    "message": "Memory usage is at 85% capacity on db-01",
+    "type": "warning",
+    "category": "performance",
+    "status": "acknowledged",
+    "priority": "medium",
+    "data": {
+      "metric": "memory",
+      "value": 6.8,
+      "threshold": 6.0
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:10:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:10:00Z"
+      }
+    },
+    "resolution": {
+      "acknowledgedBy": "user-02",
+      "acknowledgedAt": "2024-01-20T02:15:00Z"
+    },
+    "createdAt": "2024-01-20T02:00:00Z"
+  },
+  {
+    "id": "alert-003",
+    "vmId": "vm-03",
+    "userId": "user-03",
+    "title": "Disk Space Critical",
+    "message": "Disk usage has reached 95% on api-01",
+    "type": "critical",
+    "category": "performance",
+    "status": "active",
+    "priority": "critical",
+    "data": {
+      "metric": "disk",
+      "value": 95.2,
+      "threshold": 90
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T01:45:00Z"
+      },
+      "sms": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T01:45:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T01:45:00Z"
+      }
+    },
+    "createdAt": "2024-01-20T01:45:00Z"
+  },
+  {
+    "id": "alert-004",
+    "vmId": "vm-05",
+    "userId": "user-04",
+    "title": "Network Connectivity Issue",
+    "message": "Network latency is higher than normal on staging-01",
+    "type": "warning",
+    "category": "network",
+    "status": "resolved",
+    "priority": "medium",
+    "data": {
+      "metric": "network",
+      "value": 500,
+      "threshold": 200
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T00:30:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T00:30:00Z"
+      }
+    },
+    "resolution": {
+      "acknowledgedBy": "user-04",
+      "acknowledgedAt": "2024-01-20T00:35:00Z",
+      "resolvedBy": "user-04",
+      "resolvedAt": "2024-01-20T00:45:00Z",
+      "resolutionNote": "Network issue resolved after router restart"
+    },
+    "createdAt": "2024-01-20T00:30:00Z"
+  },
+  {
+    "id": "alert-005",
+    "vmId": "vm-07",
+    "userId": "user-05",
+    "title": "Backup Failed",
+    "message": "Daily backup failed on backup-01",
+    "type": "error",
+    "category": "system",
+    "status": "active",
+    "priority": "high",
+    "data": {
+      "metric": "backup",
+      "value": 0,
+      "threshold": 1
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T03:00:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T03:00:00Z"
+      }
+    },
+    "createdAt": "2024-01-20T03:00:00Z"
+  },
+  {
+    "id": "alert-006",
+    "vmId": "vm-08",
+    "userId": "user-05",
+    "title": "Cache Server Down",
+    "message": "Redis cache server is not responding on cache-01",
+    "type": "critical",
+    "category": "system",
+    "status": "resolved",
+    "priority": "critical",
+    "data": {
+      "metric": "uptime",
+      "value": 0,
+      "threshold": 1
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-19T22:15:00Z"
+      },
+      "sms": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-19T22:15:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-19T22:15:00Z"
+      }
+    },
+    "resolution": {
+      "acknowledgedBy": "user-05",
+      "acknowledgedAt": "2024-01-19T22:20:00Z",
+      "resolvedBy": "user-05",
+      "resolvedAt": "2024-01-19T22:35:00Z",
+      "resolutionNote": "Redis service restarted successfully"
+    },
+    "createdAt": "2024-01-19T22:15:00Z"
+  },
+  {
+    "id": "alert-007",
+    "vmId": "vm-09",
+    "userId": "user-06",
+    "title": "Load Balancer Health Check Failed",
+    "message": "Health check failed for load-balancer-01",
+    "type": "warning",
+    "category": "system",
+    "status": "acknowledged",
+    "priority": "high",
+    "data": {
+      "metric": "health",
+      "value": 0,
+      "threshold": 1
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T01:20:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T01:20:00Z"
+      }
+    },
+    "resolution": {
+      "acknowledgedBy": "user-06",
+      "acknowledgedAt": "2024-01-20T01:25:00Z"
+    },
+    "createdAt": "2024-01-20T01:20:00Z"
+  },
+  {
+    "id": "alert-008",
+    "vmId": "vm-01",
+    "userId": "user-02",
+    "title": "SSL Certificate Expiring Soon",
+    "message": "SSL certificate for example.com expires in 30 days",
+    "type": "info",
+    "category": "security",
+    "status": "active",
+    "priority": "medium",
+    "data": {
+      "metric": "ssl",
+      "value": 30,
+      "threshold": 30
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T00:00:00Z"
+      }
+    },
+    "createdAt": "2024-01-20T00:00:00Z"
+  },
+  {
+    "id": "alert-009",
+    "vmId": "vm-02",
+    "userId": "user-02",
+    "title": "Database Connection Pool Exhausted",
+    "message": "Database connection pool is at 95% capacity on db-01",
+    "type": "warning",
+    "category": "performance",
+    "status": "active",
+    "priority": "high",
+    "data": {
+      "metric": "connections",
+      "value": 95,
+      "threshold": 90
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:30:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-20T02:30:00Z"
+      }
+    },
+    "createdAt": "2024-01-20T02:30:00Z"
+  },
+  {
+    "id": "alert-010",
+    "vmId": "vm-03",
+    "userId": "user-03",
+    "title": "API Response Time High",
+    "message": "Average API response time is 2.5 seconds on api-01",
+    "type": "warning",
+    "category": "performance",
+    "status": "dismissed",
+    "priority": "medium",
+    "data": {
+      "metric": "response_time",
+      "value": 2500,
+      "threshold": 2000
+    },
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-19T18:45:00Z"
+      },
+      "push": {
+        "enabled": true,
+        "sent": true,
+        "sentAt": "2024-01-19T18:45:00Z"
+      }
+    },
+    "resolution": {
+      "acknowledgedBy": "user-03",
+      "acknowledgedAt": "2024-01-19T18:50:00Z",
+      "resolvedBy": "user-03",
+      "resolvedAt": "2024-01-19T19:00:00Z",
+      "resolutionNote": "Performance issue resolved after code optimization"
+    },
+    "createdAt": "2024-01-19T18:45:00Z"
+  }
+]

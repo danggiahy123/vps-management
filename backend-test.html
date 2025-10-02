@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS Management Backend Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">VPS Management Backend Test</h1>
+        
+        <!-- Server Status -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Server Status</h2>
+            <div class="flex items-center space-x-4">
+                <div id="status-indicator" class="w-4 h-4 bg-gray-400 rounded-full"></div>
+                <span id="status-text" class="text-gray-600">Checking server...</span>
+            </div>
+            <div id="server-info" class="mt-4 text-sm text-gray-500"></div>
+        </div>
+
+        <!-- API Endpoints -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">API Endpoints</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 border rounded-lg">
+                    <div>
+                        <h3 class="font-medium">GET /</h3>
+                        <p class="text-sm text-gray-500">Server info</p>
+                    </div>
+                    <button onclick="testEndpoint('/')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                        Test
+                    </button>
+                </div>
+                <div class="flex items-center justify-between p-4 border rounded-lg">
+                    <div>
+                        <h3 class="font-medium">GET /api/vps</h3>
+                        <p class="text-sm text-gray-500">VPS list</p>
+                    </div>
+                    <button onclick="testEndpoint('/api/vps')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                        Test
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Response Display -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">API Response</h2>
+            <pre id="response-display" class="bg-gray-100 p-4 rounded text-sm overflow-auto max-h-96">
+Click "Test" button to see API responses...
+            </pre>
+        </div>
+
+        <!-- Instructions -->
+        <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Instructions</h3>
+            <ol class="list-decimal list-inside space-y-2 text-blue-800">
+                <li>Make sure backend server is running: <code class="bg-blue-100 px-2 py-1 rounded">cd BACKEND && npm run dev</code></li>
+                <li>Server should be running on <code class="bg-blue-100 px-2 py-1 rounded">http://localhost:3001</code></li>
+                <li>Click "Test" buttons to check API endpoints</li>
+                <li>Check browser console for any errors</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001';
+        
+        // Check server status on page load
+        window.onload = function() {
+            checkServerStatus();
+        };
+
+        async function checkServerStatus() {
+            const statusIndicator = document.getElementById('status-indicator');
+            const statusText = document.getElementById('status-text');
+            const serverInfo = document.getElementById('server-info');
+
+            try {
+                const response = await fetch(`${API_BASE}/`);
+                if (response.ok) {
+                    const data = await response.json();
+                    statusIndicator.className = 'w-4 h-4 bg-green-500 rounded-full';
+                    statusText.textContent = 'Server is running';
+                    serverInfo.textContent = `Response: ${JSON.stringify(data)}`;
+                } else {
+                    throw new Error('Server responded with error');
+                }
+            } catch (error) {
+                statusIndicator.className = 'w-4 h-4 bg-red-500 rounded-full';
+                statusText.textContent = 'Server is not running';
+                serverInfo.textContent = `Error: ${error.message}`;
+            }
+        }
+
+        async function testEndpoint(endpoint) {
+            const responseDisplay = document.getElementById('response-display');
+            
+            try {
+                responseDisplay.textContent = 'Loading...';
+                
+                const response = await fetch(`${API_BASE}${endpoint}`);
+                const data = await response.json();
+                
+                responseDisplay.textContent = JSON.stringify(data, null, 2);
+                
+                // Update status if this was a status check
+                if (endpoint === '/') {
+                    checkServerStatus();
+                }
+                
+            } catch (error) {
+                responseDisplay.textContent = `Error: ${error.message}\n\nMake sure the backend server is running on port 3001.`;
+            }
+        }
+
+        // Auto-refresh status every 5 seconds
+        setInterval(checkServerStatus, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "metric-001",
+    "vmId": "vm-01",
+    "type": "cpu",
+    "value": 25.5,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-002",
+    "vmId": "vm-01",
+    "type": "memory",
+    "value": 3.2,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-003",
+    "vmId": "vm-01",
+    "type": "disk",
+    "value": 30.5,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-004",
+    "vmId": "vm-01",
+    "type": "network",
+    "value": 125.8,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-005",
+    "vmId": "vm-01",
+    "type": "cpu",
+    "value": 28.2,
+    "unit": "%",
+    "timestamp": "2024-01-20T01:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-006",
+    "vmId": "vm-01",
+    "type": "memory",
+    "value": 3.4,
+    "unit": "GB",
+    "timestamp": "2024-01-20T01:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-007",
+    "vmId": "vm-01",
+    "type": "disk",
+    "value": 30.7,
+    "unit": "GB",
+    "timestamp": "2024-01-20T01:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-008",
+    "vmId": "vm-01",
+    "type": "network",
+    "value": 98.3,
+    "unit": "MB",
+    "timestamp": "2024-01-20T01:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-009",
+    "vmId": "vm-02",
+    "type": "cpu",
+    "value": 45.8,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-010",
+    "vmId": "vm-02",
+    "type": "memory",
+    "value": 5.6,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-011",
+    "vmId": "vm-02",
+    "type": "disk",
+    "value": 60.2,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-012",
+    "vmId": "vm-02",
+    "type": "network",
+    "value": 89.7,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-013",
+    "vmId": "vm-03",
+    "type": "cpu",
+    "value": 35.2,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-014",
+    "vmId": "vm-03",
+    "type": "memory",
+    "value": 4.0,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-015",
+    "vmId": "vm-03",
+    "type": "disk",
+    "value": 40.1,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-016",
+    "vmId": "vm-03",
+    "type": "network",
+    "value": 156.3,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-017",
+    "vmId": "vm-05",
+    "type": "cpu",
+    "value": 20.8,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-018",
+    "vmId": "vm-05",
+    "type": "memory",
+    "value": 2.8,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-019",
+    "vmId": "vm-05",
+    "type": "disk",
+    "value": 25.3,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-020",
+    "vmId": "vm-05",
+    "type": "network",
+    "value": 67.9,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-021",
+    "vmId": "vm-06",
+    "type": "cpu",
+    "value": 30.5,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-022",
+    "vmId": "vm-06",
+    "type": "memory",
+    "value": 3.6,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-023",
+    "vmId": "vm-06",
+    "type": "disk",
+    "value": 35.8,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-024",
+    "vmId": "vm-06",
+    "type": "network",
+    "value": 112.4,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-025",
+    "vmId": "vm-07",
+    "type": "cpu",
+    "value": 10.2,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-026",
+    "vmId": "vm-07",
+    "type": "memory",
+    "value": 1.6,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-027",
+    "vmId": "vm-07",
+    "type": "disk",
+    "value": 80.5,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-028",
+    "vmId": "vm-07",
+    "type": "network",
+    "value": 45.7,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-029",
+    "vmId": "vm-08",
+    "type": "cpu",
+    "value": 40.8,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-030",
+    "vmId": "vm-08",
+    "type": "memory",
+    "value": 4.8,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-031",
+    "vmId": "vm-08",
+    "type": "disk",
+    "value": 15.2,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-032",
+    "vmId": "vm-08",
+    "type": "network",
+    "value": 203.6,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-033",
+    "vmId": "vm-09",
+    "type": "cpu",
+    "value": 25.3,
+    "unit": "%",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-034",
+    "vmId": "vm-09",
+    "type": "memory",
+    "value": 2.4,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-035",
+    "vmId": "vm-09",
+    "type": "disk",
+    "value": 20.7,
+    "unit": "GB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-036",
+    "vmId": "vm-09",
+    "type": "network",
+    "value": 178.9,
+    "unit": "MB",
+    "timestamp": "2024-01-20T00:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-037",
+    "vmId": "vm-01",
+    "type": "cpu",
+    "value": 85.2,
+    "unit": "%",
+    "timestamp": "2024-01-20T02:00:00Z",
+    "status": "warning"
+  },
+  {
+    "id": "metric-038",
+    "vmId": "vm-02",
+    "type": "memory",
+    "value": 6.8,
+    "unit": "GB",
+    "timestamp": "2024-01-20T02:00:00Z",
+    "status": "warning"
+  },
+  {
+    "id": "metric-039",
+    "vmId": "vm-03",
+    "type": "disk",
+    "value": 38.5,
+    "unit": "GB",
+    "timestamp": "2024-01-20T02:00:00Z",
+    "status": "normal"
+  },
+  {
+    "id": "metric-040",
+    "vmId": "vm-05",
+    "type": "network",
+    "value": 89.2,
+    "unit": "MB",
+    "timestamp": "2024-01-20T02:00:00Z",
+    "status": "normal"
+  }
+]

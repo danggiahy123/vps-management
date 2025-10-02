@@ -1,0 +1,413 @@
+[
+  {
+    "id": "domain-01",
+    "name": "example.com",
+    "ownerId": "user-02",
+    "vmId": "vm-01",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.5",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.5",
+        "ttl": 3600
+      },
+      {
+        "type": "MX",
+        "name": "@",
+        "value": "mail.example.com",
+        "ttl": 3600,
+        "priority": 10
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "Let's Encrypt",
+      "expiresAt": "2024-04-15T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "GoDaddy",
+      "registeredAt": "2023-01-15T00:00:00Z",
+      "expiresAt": "2025-01-15T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 10,
+    "currency": "USD",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "domain-02",
+    "name": "api.example.com",
+    "ownerId": "user-02",
+    "vmId": "vm-03",
+    "status": "active",
+    "type": "subdomain",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.7",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "Let's Encrypt",
+      "expiresAt": "2024-04-15T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "GoDaddy",
+      "registeredAt": "2023-01-15T00:00:00Z",
+      "expiresAt": "2025-01-15T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 0,
+    "currency": "USD",
+    "createdAt": "2024-01-10T14:20:00Z"
+  },
+  {
+    "id": "domain-03",
+    "name": "techcorp.com",
+    "ownerId": "user-03",
+    "vmId": "vm-05",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.9",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.9",
+        "ttl": 3600
+      },
+      {
+        "type": "CNAME",
+        "name": "blog",
+        "value": "techcorp.com",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "DigiCert",
+      "expiresAt": "2024-06-20T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Route53",
+    "registration": {
+      "registrar": "Namecheap",
+      "registeredAt": "2022-08-20T00:00:00Z",
+      "expiresAt": "2024-08-20T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 15,
+    "currency": "USD",
+    "createdAt": "2024-01-08T11:15:00Z"
+  },
+  {
+    "id": "domain-04",
+    "name": "startup.io",
+    "ownerId": "user-04",
+    "vmId": "vm-06",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.10",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.10",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "app",
+        "value": "10.0.0.10",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "Let's Encrypt",
+      "expiresAt": "2024-03-10T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "Namecheap",
+      "registeredAt": "2023-03-10T00:00:00Z",
+      "expiresAt": "2025-03-10T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 20,
+    "currency": "USD",
+    "createdAt": "2024-01-08T11:20:00Z"
+  },
+  {
+    "id": "domain-05",
+    "name": "webdev.agency",
+    "ownerId": "user-05",
+    "vmId": "vm-07",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.11",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.11",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "portfolio",
+        "value": "10.0.0.11",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "Let's Encrypt",
+      "expiresAt": "2024-05-05T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "GoDaddy",
+      "registeredAt": "2023-05-05T00:00:00Z",
+      "expiresAt": "2025-05-05T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 12,
+    "currency": "USD",
+    "createdAt": "2024-01-05T09:45:00Z"
+  },
+  {
+    "id": "domain-06",
+    "name": "ecommerce.plus",
+    "ownerId": "user-06",
+    "vmId": "vm-09",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.13",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.13",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "shop",
+        "value": "10.0.0.13",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "admin",
+        "value": "10.0.0.13",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "DigiCert",
+      "expiresAt": "2024-07-03T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Route53",
+    "registration": {
+      "registrar": "Namecheap",
+      "registeredAt": "2022-07-03T00:00:00Z",
+      "expiresAt": "2024-07-03T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 18,
+    "currency": "USD",
+    "createdAt": "2024-01-03T16:30:00Z"
+  },
+  {
+    "id": "domain-07",
+    "name": "mobileapp.studio",
+    "ownerId": "user-07",
+    "vmId": "vm-08",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.12",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.12",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "api",
+        "value": "10.0.0.12",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "Let's Encrypt",
+      "expiresAt": "2024-02-02T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "GoDaddy",
+      "registeredAt": "2023-02-02T00:00:00Z",
+      "expiresAt": "2025-02-02T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 14,
+    "currency": "USD",
+    "createdAt": "2024-01-02T13:20:00Z"
+  },
+  {
+    "id": "domain-08",
+    "name": "cloudtech.solutions",
+    "ownerId": "user-08",
+    "vmId": "vm-02",
+    "status": "active",
+    "type": "primary",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.6",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "www",
+        "value": "10.0.0.6",
+        "ttl": 3600
+      },
+      {
+        "type": "A",
+        "name": "dashboard",
+        "value": "10.0.0.6",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": true,
+      "issuer": "DigiCert",
+      "expiresAt": "2024-08-01T00:00:00Z",
+      "autoRenew": true
+    },
+    "provider": "Route53",
+    "registration": {
+      "registrar": "Namecheap",
+      "registeredAt": "2022-08-01T00:00:00Z",
+      "expiresAt": "2024-08-01T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 16,
+    "currency": "USD",
+    "createdAt": "2024-01-01T08:15:00Z"
+  },
+  {
+    "id": "domain-09",
+    "name": "test.example.com",
+    "ownerId": "user-02",
+    "vmId": "vm-04",
+    "status": "inactive",
+    "type": "subdomain",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.8",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": false,
+      "issuer": null,
+      "expiresAt": null,
+      "autoRenew": false
+    },
+    "provider": "Cloudflare",
+    "registration": {
+      "registrar": "GoDaddy",
+      "registeredAt": "2023-01-15T00:00:00Z",
+      "expiresAt": "2025-01-15T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 0,
+    "currency": "USD",
+    "createdAt": "2024-01-10T14:25:00Z"
+  },
+  {
+    "id": "domain-10",
+    "name": "demo.cloudtech.solutions",
+    "ownerId": "user-08",
+    "vmId": "vm-10",
+    "status": "inactive",
+    "type": "subdomain",
+    "dnsRecords": [
+      {
+        "type": "A",
+        "name": "@",
+        "value": "10.0.0.14",
+        "ttl": 3600
+      }
+    ],
+    "ssl": {
+      "enabled": false,
+      "issuer": null,
+      "expiresAt": null,
+      "autoRenew": false
+    },
+    "provider": "Route53",
+    "registration": {
+      "registrar": "Namecheap",
+      "registeredAt": "2022-08-01T00:00:00Z",
+      "expiresAt": "2024-08-01T00:00:00Z",
+      "autoRenew": true
+    },
+    "pricing": 0,
+    "currency": "USD",
+    "createdAt": "2024-01-03T16:35:00Z"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": "user-01",
+      "username": "admin",
+      "email": "admin@vps-management.com",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "user-02",
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "vms": [
+    {
+      "id": "vm-01",
+      "name": "web-01",
+      "ip": "10.0.0.5",
+      "ownerId": "user-02",
+      "status": "running",
+      "cpu": 25,
+      "ram": 40,
+      "disk": 30,
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "vm-02",
+      "name": "db-01",
+      "ip": "10.0.0.6",
+      "ownerId": "user-02",
+      "status": "running",
+      "cpu": 45,
+      "ram": 70,
+      "disk": 60,
+      "createdAt": "2024-01-15T10:35:00Z"
+    }
+  ],
+  "domains": [
+    {
+      "id": "domain-01",
+      "name": "example.com",
+      "ownerId": "user-02",
+      "vmId": "vm-01",
+      "status": "active",
+      "createdAt": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "metric-001",
+      "vmId": "vm-01",
+      "type": "cpu",
+      "value": 25.5,
+      "unit": "%",
+      "timestamp": "2024-01-20T00:00:00Z",
+      "status": "normal"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-001",
+      "vmId": "vm-01",
+      "userId": "user-02",
+      "title": "High CPU Usage",
+      "type": "warning",
+      "status": "active",
+      "createdAt": "2024-01-20T02:00:00Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log-001",
+      "userId": "user-02",
+      "action": "user_login",
+      "status": "success",
+      "timestamp": "2024-01-20T08:45:00Z"
+    }
+  ]
+}
