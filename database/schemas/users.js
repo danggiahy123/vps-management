@@ -163,3 +163,4 @@ userSchema.index({ status: 1 });
 userSchema.index({ createdAt: -1 });
 
 module.exports = mongoose.model('User', userSchema);
+

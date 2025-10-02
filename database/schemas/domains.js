@@ -230,3 +230,4 @@ domainSchema.index({ 'registration.expiresAt': 1 });
 domainSchema.index({ createdAt: -1 });
 
 module.exports = mongoose.model('Domain', domainSchema);
+

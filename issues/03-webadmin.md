@@ -73,3 +73,4 @@ Develop Next.js web admin panel for VPS Management System
 **Assignee**: TBD  
 **Labels**: `web-admin`, `nextjs`, `typescript`, `mvp`  
 **Created**: $(date)
+

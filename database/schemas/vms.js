@@ -262,3 +262,4 @@ vmSchema.index({ expiry: 1 });
 vmSchema.index({ 'location.country': 1, 'location.city': 1 });
 
 module.exports = mongoose.model('VM', vmSchema);
+

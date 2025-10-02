@@ -256,3 +256,4 @@ alertSchema.index({ status: 1, createdAt: -1 });
 alertSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
 
 module.exports = mongoose.model('Alert', alertSchema);
+

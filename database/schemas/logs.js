@@ -198,3 +198,4 @@ logSchema.index({ 'metadata.ip': 1, timestamp: -1 });
 logSchema.index({ timestamp: 1 }, { expireAfterSeconds: 0 });
 
 module.exports = mongoose.model('Log', logSchema);
+

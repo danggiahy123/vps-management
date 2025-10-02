@@ -134,3 +134,4 @@ metricsSchema.index({ 'data.value': 1, timestamp: -1 });
 metricsSchema.index({ timestamp: 1 }, { expireAfterSeconds: 0 });
 
 module.exports = mongoose.model('Metrics', metricsSchema);
+

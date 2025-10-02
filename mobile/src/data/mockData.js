@@ -120,3 +120,4 @@ export const mockMetrics = [
   { time: "10:00", cpu: 70, ram: 65 },
   { time: "11:00", cpu: 75, ram: 68 }
 ];
+

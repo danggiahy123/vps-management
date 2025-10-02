@@ -49,3 +49,4 @@ POST   /api/auth/register - User registration
 **Assignee**: TBD  
 **Labels**: `backend`, `api`, `express`, `mvp`  
 **Created**: $(date)
+
