@@ -3,98 +3,149 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  HomeIcon,
-  UsersIcon,
-  ServerIcon,
-  GlobeAltIcon,
-  ExclamationTriangleIcon,
-  ArrowRightOnRectangleIcon,
-  ChartBarIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
-
-const navigation = [
-  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
-  { name: 'VPS Management', href: '/vps', icon: ServerIcon },
-  { name: 'Users', href: '/users', icon: UsersIcon },
-  { name: 'Domains', href: '/domains', icon: GlobeAltIcon },
-  { name: 'Alerts', href: '/alerts', icon: ExclamationTriangleIcon },
-  { name: 'Analytics', href: '/analytics', icon: ChartBarIcon },
-  { name: 'Settings', href: '/settings', icon: CogIcon },
-];
 
 export default function Sidebar() {
   const pathname = usePathname();
 
-  const handleLogout = () => {
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('user');
-    window.location.href = '/login';
-  };
+  const navigation = [
+    { name: 'Dashboard', href: '/dashboard', active: true },
+  ];
+
+  const services = [
+    { name: 'Cloud VPS VN', hasPlus: true },
+    { name: 'VPS Nước ngoài', hasPlus: true },
+    { name: 'Dịch vụ Proxy', hasPlus: true },
+    { name: 'Dịch vụ của tôi', hasPlus: true },
+  ];
+
+  const payment = [
+    { name: 'Đơn đặt hàng' },
+    { name: 'Hóa đơn' },
+  ];
+
+  const transactions = [
+    { name: 'Nạp tiền' },
+    { name: 'Lịch sử giao dịch' },
+  ];
+
+  const activity = [
+    { name: 'Nhật ký hoạt động' },
+  ];
 
   return (
-    <div className="flex flex-col w-64 bg-white border-r border-gray-200 shadow-sm">
+    <div className="w-80 bg-gradient-to-b from-white to-gray-50 shadow-2xl h-full border-r border-gray-200">
       {/* Logo */}
-      <div className="flex items-center h-16 px-6 border-b border-gray-200">
+      <div className="flex items-center px-6 py-8 border-b border-gray-200 bg-gradient-to-r from-blue-600 to-indigo-700">
         <div className="flex items-center space-x-3">
-          <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <ServerIcon className="h-4 w-4 text-white" />
+          <div className="h-12 w-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <span className="text-blue-600 text-2xl">☁️</span>
           </div>
           <div>
-            <h1 className="text-lg font-bold text-gray-900">VPS Manager</h1>
-            <p className="text-xs text-gray-500">Admin Panel</p>
+            <h1 className="text-lg font-bold text-white">
+              CLOUD NEST TECHNOLOGY
+            </h1>
+            <p className="text-xs text-blue-200">VPS Management System</p>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 px-4 py-6 space-y-2">
-        {navigation.map((item) => {
-          const isActive = pathname === item.href;
-          return (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`group flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
-                isActive
-                  ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700 shadow-sm'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-              }`}
-            >
-              <item.icon
-                className={`mr-3 h-5 w-5 flex-shrink-0 ${
-                  isActive ? 'text-blue-700' : 'text-gray-400 group-hover:text-gray-600'
+      <nav className="px-4 py-6 space-y-6 overflow-y-auto h-full">
+        {/* Dashboard */}
+        <div>
+          {navigation.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg transform scale-105'
+                    : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-md hover:scale-105'
                 }`}
-              />
-              {item.name}
-            </Link>
-          );
-        })}
-      </nav>
-
-      {/* User Info & Logout */}
-      <div className="border-t border-gray-200 p-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-              <span className="text-xs font-semibold text-white">A</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-gray-900 truncate">Admin User</p>
-              <p className="text-xs text-gray-500 truncate">admin@vps-management.com</p>
-            </div>
-          </div>
-          <button
-            onClick={handleLogout}
-            className="p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
-            title="Logout"
-          >
-            <ArrowRightOnRectangleIcon className="h-5 w-5" />
-          </button>
+              >
+                <span className="mr-3 text-lg">🏠</span>
+                {item.name}
+                {isActive && (
+                  <div className="ml-auto">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                )}
+              </Link>
+            );
+          })}
         </div>
-      </div>
+
+        {/* DỊCH VỤ */}
+        <div>
+          <h3 className="px-4 text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 flex items-center">
+            <span className="mr-2">📦</span>
+            DỊCH VỤ
+          </h3>
+          <div className="space-y-1">
+            {services.map((item, index) => (
+              <div key={index} className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-600 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-md hover:scale-105 group">
+                <div className="flex items-center">
+                  <span className="mr-3 text-lg group-hover:scale-110 transition-transform duration-200">☁️</span>
+                  {item.name}
+                </div>
+                {item.hasPlus && (
+                  <span className="text-blue-500 font-bold group-hover:scale-110 transition-transform duration-200">+</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* THANH TOÁN */}
+        <div>
+          <h3 className="px-4 text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 flex items-center">
+            <span className="mr-2">💳</span>
+            THANH TOÁN
+          </h3>
+          <div className="space-y-1">
+            {payment.map((item, index) => (
+              <div key={index} className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-green-50 hover:to-emerald-50 hover:text-green-600 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-md hover:scale-105 group">
+                <span className="mr-3 text-lg group-hover:scale-110 transition-transform duration-200">🛒</span>
+                {item.name}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* GIAO DỊCH */}
+        <div>
+          <h3 className="px-4 text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 flex items-center">
+            <span className="mr-2">💸</span>
+            GIAO DỊCH
+          </h3>
+          <div className="space-y-1">
+            {transactions.map((item, index) => (
+              <div key={index} className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-orange-50 hover:text-orange-600 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-md hover:scale-105 group">
+                <span className="mr-3 text-lg group-hover:scale-110 transition-transform duration-200">💰</span>
+                {item.name}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* NHẬT KÝ HOẠT ĐỘNG */}
+        <div>
+          <h3 className="px-4 text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 flex items-center">
+            <span className="mr-2">📊</span>
+            NHẬT KÝ HOẠT ĐỘNG
+          </h3>
+          <div className="space-y-1">
+            {activity.map((item, index) => (
+              <div key={index} className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 hover:text-purple-600 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-md hover:scale-105 group">
+                <span className="mr-3 text-lg group-hover:scale-110 transition-transform duration-200">📄</span>
+                {item.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
-
